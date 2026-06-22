@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Mercer — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ PARTICLE CANVAS ░░ -->
+  <canvas id="starfield"></canvas>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" data-label="About">About</a></li>
+        <li><a href="#projects" data-label="Projects">Projects</a></li>
+        <li><a href="#stack" data-label="Stack">Stack</a></li>
+        <li><a href="#contact" data-label="Contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="nav-burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="dot"></span> Available for work</p>
+      <h1 class="hero-title">
+        Building<br />
+        <span class="gradient-text">Digital Products</span><br />
+        That Matter
+      </h1>
+      <p class="hero-bio">
+        I'm <strong>Alex Mercer</strong> — a full-stack developer who turns complex problems into 
+        clean, performant experiences. Specialising in React, Node.js, and cloud-native architecture.
+      </p>
+      <div class="hero-cta">
+        <a href="cv.pdf" download class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#projects" class="btn btn-ghost">View Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years exp.</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Clients</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label"><span class="mono">// 01</span> About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Crafting code<br /><em>with purpose</em></h2>
+          <p>
+            From the first line of a spec to deployment, I'm obsessed with the details that 
+            separate good software from great software. I believe in systems thinking, ruthless 
+            optimisation, and collaborative engineering culture.
+          </p>
+          <p>
+            When I'm not in the terminal, I'm probably tinkering with hardware, reading systems 
+            papers, or photographing abandoned architecture.
+          </p>
+          <div class="about-badges">
+            <span class="badge">Problem Solver</span>
+            <span class="badge">Open Source</span>
+            <span class="badge">Agile</span>
+            <span class="badge">Remote-first</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="avatar-frame">
+            <div class="avatar-inner">
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="80" r="40" fill="var(--cyan)" opacity="0.15" />
+                <circle cx="100" cy="80" r="40" stroke="var(--cyan)" stroke-width="1.5" />
+                <path d="M60 160 Q100 120 140 160" stroke="var(--cyan)" stroke-width="1.5" fill="none" />
+                <circle cx="100" cy="80" r="20" fill="var(--cyan)" opacity="0.3" />
+              </svg>
+            </div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-tag">
+              <span class="dot dot-green"></span>
+              <span class="mono">status: online</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PROJECTS ░░ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label"><span class="mono">// 02</span> Projects</div>
+      <h2 class="section-title">Selected Work</h2>
+      <div class="projects-grid">
+
+        <article class="card card--featured">
+          <div class="card-image">
+            <div class="card-image-inner" style="background: linear-gradient(135deg, #0d1f3c 0%, #0bffe720 100%);">
+              <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="40" y="40" width="320" height="180" rx="8" stroke="#0BFFE7" stroke-width="1" opacity="0.4"/>
+                <rect x="60" y="60" width="140" height="90" rx="4" fill="#0BFFE7" opacity="0.08"/>
+                <line x1="60" y1="170" x2="340" y2="170" stroke="#0BFFE7" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="200" cy="105" r="30" stroke="#6E7EFF" stroke-width="1.5" opacity="0.6"/>
+                <path d="M185 105 L200 90 L215 105 L200 120 Z" fill="#6E7EFF" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">SaaS</span>
+              <span class="card-tag">2024</span>
+            </div>
+            <h3 class="card-title">NovaDash Analytics</h3>
+            <p class="card-desc">Real-time business intelligence platform processing 10M+ events/day. Built a custom streaming pipeline with WebSocket push, React dashboards, and ML anomaly detection.</p>
+            <div class="card-stack">
+              <span>React</span><span>Node.js</span><span>Kafka</span><span>PostgreSQL</span><span>AWS</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="#" class="card-link card-link--ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <div class="card-image-inner" style="background: linear-gradient(135deg, #1a0d3c 0%, #6e7eff20 100%);">
+              <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="80" y="50" width="240" height="40" rx="20" fill="#6E7EFF" opacity="0.15" stroke="#6E7EFF" stroke-width="1"/>
+                <rect x="80" y="110" width="180" height="40" rx="20" fill="#6E7EFF" opacity="0.1" stroke="#6E7EFF" stroke-width="0.5"/>
+                <rect x="80" y="170" width="220" height="40" rx="20" fill="#6E7EFF" opacity="0.05"/>
+                <circle cx="320" cy="70" r="12" fill="#0BFFE7" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">AI/ML</span>
+              <span class="card-tag">2024</span>
+            </div>
+            <h3 class="card-title">Cortex CMS</h3>
+            <p class="card-desc">AI-powered headless CMS with semantic search, auto-tagging, and LLM content suggestions. Reduced editorial time by 60%.</p>
+            <div class="card-stack">
+              <span>Next.js</span><span>Python</span><span>OpenAI</span><span>Prisma</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link">Live Demo</a>
+              <a href="#" class="card-link card-link--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <div class="card-image-inner" style="background: linear-gradient(135deg, #0d2b1f 0%, #00ff8820 100%);">
+              <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <path d="M100 180 L150 100 L200 140 L250 60 L300 120" stroke="#00FF88" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+                <circle cx="100" cy="180" r="5" fill="#00FF88" opacity="0.6"/>
+                <circle cx="150" cy="100" r="5" fill="#00FF88" opacity="0.6"/>
+                <circle cx="200" cy="140" r="5" fill="#00FF88" opacity="0.6"/>
+                <circle cx="250" cy="60" r="5" fill="#00FF88" opacity="0.6"/>
+                <circle cx="300" cy="120" r="5" fill="#00FF88" opacity="0.6"/>
+                <rect x="80" y="160" width="240" height="1" fill="#00FF88" opacity="0.2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">FinTech</span>
+              <span class="card-tag">2023</span>
+            </div>
+            <h3 class="card-title">PulseTrader</h3>
+            <p class="card-desc">Algorithmic trading dashboard with live market feeds, backtesting engine, and portfolio risk scoring. Handles 1000 req/s with sub-50ms latency.</p>
+            <div class="card-stack">
+              <span>TypeScript</span><span>D3.js</span><span>Redis</span><span>Go</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link">Live Demo</a>
+              <a href="#" class="card-link card-link--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <div class="card-image-inner" style="background: linear-gradient(135deg, #2b0d1a 0%, #ff6b9d20 100%);">
+              <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="60" y="40" width="120" height="140" rx="12" stroke="#FF6B9D" stroke-width="1" opacity="0.5" fill="#FF6B9D" fill-opacity="0.05"/>
+                <rect x="220" y="60" width="120" height="100" rx="12" stroke="#FF6B9D" stroke-width="1" opacity="0.3" fill="#FF6B9D" fill-opacity="0.03"/>
+                <circle cx="120" cy="110" r="25" fill="#FF6B9D" opacity="0.15"/>
+                <line x1="185" y1="110" x2="215" y2="110" stroke="#FF6B9D" stroke-width="1.5" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">Mobile</span>
+              <span class="card-tag">2023</span>
+            </div>
+            <h3 class="card-title">SyncSpace</h3>
+            <p class="card-desc">Cross-platform productivity app with offline-first sync, conflict resolution, and end-to-end encryption. 15k+ active users.</p>
+            <div class="card-stack">
+              <span>React Native</span><span>GraphQL</span><span>SQLite</span><span>Firebase</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link">App Store</a>
+              <a href="#" class="card-link card-link--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <div class="card-image-inner" style="background: linear-gradient(135deg, #0d1f2b 0%, #00d4ff20 100%);">
+              <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="70" y="50" width="260" height="120" rx="6" stroke="#00D4FF" stroke-width="1" opacity="0.4"/>
+                <rect x="70" y="50" width="260" height="24" rx="6" fill="#00D4FF" opacity="0.1"/>
+                <circle cx="88" cy="62" r="5" fill="#FF5F57" opacity="0.7"/>
+                <circle cx="104" cy="62" r="5" fill="#FEBC2E" opacity="0.7"/>
+                <circle cx="120" cy="62" r="5" fill="#28C840" opacity="0.7"/>
+                <rect x="86" y="90" width="120" height="6" rx="3" fill="#00D4FF" opacity="0.3"/>
+                <rect x="86" y="106" width="80" height="6" rx="3" fill="#00D4FF" opacity="0.2"/>
+                <rect x="86" y="122" width="160" height="6" rx="3" fill="#00D4FF" opacity="0.15"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag">DevTools</span>
+              <span class="card-tag">2023</span>
+            </div>
+            <h3 class="card-title">CodeBridge IDE</h3>
+            <p class="card-desc">Browser-based collaborative code editor with real-time co-editing, LSP integration, and one-click cloud deployment to 6 providers.</p>
+            <div class="card-stack">
+              <span>Monaco</span><span>WebRTC</span><span>Rust</span><span>Docker</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link">Try It</a>
+              <a href="#" class="card-link card-link--ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--more">
+          <div class="card-more-inner">
+            <div class="more-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <h3>More Projects</h3>
+            <p>See all 40+ projects on GitHub</p>
+            <a href="#" class="btn btn-ghost" style="margin-top:1.5rem;">View GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ STACK ░░ -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-label"><span class="mono">// 03</span> Stack</div>
+      <h2 class="section-title">Tech Arsenal</h2>
+      <div class="stack-grid">
+
+        <div class="stack-category">
+          <h4 class="stack-cat-title">Frontend</h4>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">⚛</span>React</div>
+            <div class="stack-item"><span class="stack-icon">▲</span>Next.js</div>
+            <div class="stack-item"><span class="stack-icon">🔷</span>TypeScript</div>
+            <div class="stack-item"><span class="stack-icon">💨</span>Tailwind</div>
+            <div class="stack-item"><span class="stack-icon">📐</span>Three.js</div>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h4 class="stack-cat-title">Backend</h4>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">🟩</span>Node.js</div>
+            <div class="stack-item"><span class="stack-icon">🐍</span>Python</div>
+            <div class="stack-item"><span class="stack-icon">🦫</span>Go</div>
+            <div class="stack-item"><span class="stack-icon">🦀</span>Rust</div>
+            <div class="stack-item"><span class="stack-icon">🔥</span>GraphQL</div>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h4 class="stack-cat-title">Data</h4>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">🐘</span>PostgreSQL</div>
+            <div class="stack-item"><span class="stack-icon">🍃</span>MongoDB</div>
+            <div class="stack-item"><span class="stack-icon">⚡</span>Redis</div>
+            <div class="stack-item"><span class="stack-icon">📊</span>Kafka</div>
+            <div class="stack-item"><span class="stack-icon">🔍</span>Elastic</div>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h4 class="stack-cat-title">Cloud & DevOps</h4>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-icon">☁️</span>AWS</div>
+            <div class="stack-item"><span class="stack-icon">🐳</span>Docker</div>
+            <div class="stack-item"><span class="stack-icon">☸</span>Kubernetes</div>
+            <div class="stack-item"><span class="stack-icon">🔁</span>GitHub Actions</div>
+            <div class="stack-item"><span class="stack-icon">📡</span>Terraform</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT ░░ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label"><span class="mono">// 04</span> Contact</div>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <h2>Let's build<br /><em>something great</em></h2>
+          <p>
+            Whether it's a greenfield product, a legacy rescue, or just a technical conversation — 
+            my inbox is always open.
+          </p>
+          <div class="contact-channels">
+            <a href="mailto:alex@mercer.dev" class="channel-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              alex@mercer.dev
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="channel-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              github.com/alexmercer
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/alexmercer
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">© 2025 Alex Mercer. Built with vanilla HTML, CSS &amp; JS.</p>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
